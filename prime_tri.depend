@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1402581651 source:c:\users\Œ«¹\documents\newprog\prime_tri\main.cpp
+	<fstream>
+	<iostream>
+	<vector>
+	<queue>
+	<list>
+	<deque>
+	<stack>
+	<map>
+	<set>
+	<bitset>
+	<string>
+	<cmath>
+	<algorithm>
+
+1402581652 source:c:\users\Œ«¹\documents\prime_tri\main.cpp
+	<fstream>
+	<iostream>
+	<vector>
+	<queue>
+	<list>
+	<deque>
+	<stack>
+	<map>
+	<set>
+	<bitset>
+	<string>
+	<cmath>
+	<algorithm>
+
