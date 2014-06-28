@@ -62,8 +62,9 @@ Seisu::Seisu(){
 }
 
 inline int Seisu::gcd(int x, int y){
+
  if(gcdmemo[x][y] > 0) return  gcdmemo[x][y];
- if(y == 0) return (gcdmemo[x][y] = x);
+ if(y == 0) return (gcdmemo[x][y]= x);
  else return (gcdmemo[x][y] = gcd(y, x % y));
 }
 
@@ -247,6 +248,7 @@ class Sotriangle: public Triangle{
     }
     cout << endl;
     cout << "THE_NUMBER_OF_TRIANGLE_IS_" << num << "." << endl;
+    free_memo();
     fout.close();
 }
 
@@ -318,6 +320,7 @@ void Sotriangle::sotri2(){
     }
     cout << endl;
     cout << "THE_NUMBER_OF_TRIANGLE_IS_" << num << "." << endl;
+    free_memo();
     fout.close();
 }
 
@@ -357,6 +360,7 @@ void Sotriangle::sotri3(){
     }
     cout << endl;
     cout << "THE_NUMBER_OF_TRIANGLE_IS_" << num << "." << endl;
+    free_memo();
     fout.close();
 }
 
@@ -401,6 +405,7 @@ void Sotriangle::sotri4(){
     }
     cout << endl;
     cout << "THE_NUMBER_OF_TRIANGLE_IS_" << num << "." << endl;
+    free_memo();
     fout.close();
 }
 
@@ -446,6 +451,7 @@ void Sotriangle::sotri5(){
     }
     cout << endl;
     cout << "THE_NUMBER_OF_TRIANGLE_IS_" << num << "." << endl;
+    free_memo();
     fout.close();
 }
 //----------------------------------
@@ -455,12 +461,12 @@ class Kensei{
     private:
         int state;
     public:
-        inline Kensei();
-        inline void main_prog();
-        inline ~Kensei();
+        Kensei();
+        void main_prog();
+        ~Kensei();
 };
 
-inline Kensei::Kensei(){
+Kensei::Kensei(){
     cout << endl;
     cout<<"WELCOME_TO_KENSEI_DEMURA'S_TRIANGLE_CALCLATING_SYSTEM!"<<endl;
     cout << endl;
@@ -488,7 +494,7 @@ inline Kensei::Kensei(){
     }
 }
 
-inline void Kensei::main_prog(){
+void Kensei::main_prog(){
     Sotriangle so;
     switch(state){
         case 1:
@@ -506,16 +512,17 @@ inline void Kensei::main_prog(){
         case 5:
             so.sotri5();
             break;
+        default:
+            break;
     }
 }
 
-inline Kensei::~Kensei(){
+Kensei::~Kensei(){
     char n;
     cout << endl;
     cout << "QUIT_PROGRAM?" << endl;
     cout << "ENTER_ANY_KEY_TO_QUIT." << endl;
     while(!(cin >> n)){}
-    free_memo();
 }
 //-----------------------------------------------------
 int main()
